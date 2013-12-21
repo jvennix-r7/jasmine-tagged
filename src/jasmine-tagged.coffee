@@ -11,7 +11,7 @@ do ->
 
   findTags = (spec) ->
     words = spec.description.split(' ')
-    tags = (word.substring(1) for word in words when word.indexOf('#') is 0)
+    tags = (word.substring(1) for word in words when word.indexOf('@') is 0)
     tags ?= []
 
     if parent = spec.parentSuite ? spec.suite
